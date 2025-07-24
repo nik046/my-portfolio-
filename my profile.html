@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nikhil Singh | Electrical Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .atom-svg {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 400px;
+      z-index: -2;
+      opacity: 0.06;
+    }
+
+    .rotate {
+      animation: rotateAtom 20s linear infinite;
+      transform-origin: center;
+    }
+
+    @keyframes rotateAtom {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    header h1 {
+      color: #00e6e6;
+      font-size: 1.8rem;
+      position: relative;
+    }
+
+    header h1::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin-top: 6px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Circuit-pattern.svg');
+      background-repeat: repeat-x;
+      background-size: contain;
+      animation: moveCircuit 5s linear infinite;
+    }
+
+    @keyframes moveCircuit {
+      from { background-position: 0 0; }
+      to { background-position: 100% 0; }
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00e6e6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #00e6e6;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 1.4rem;
+    }
+
+    .section {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 30px 0;
+      box-shadow: 0 0 20px rgba(0, 230, 230, 0.2);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .section h3 {
+      color: #00e6e6;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 15px;
+      font-size: 1.6rem;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #00e6e6;
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: #00e6e6;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      .social-icons a {
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <!-- Atom SVG -->
+  <svg class="atom-svg rotate" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="30" stroke="#00e6e6" stroke-width="1" fill="none" />
+    <ellipse cx="50" cy="50" rx="30" ry="10" stroke="#00e6e6" stroke-width="1" fill="none" transform="rotate(45 50 50)" />
+    <ellipse cx="50" cy="50" rx="30" ry="10" stroke="#00e6e6" stroke-width="1" fill="none" transform="rotate(-45 50 50)" />
+    <circle cx="50" cy="50" r="2" fill="#00e6e6" />
+  </svg>
+
+  <header>
+    <h1>Nikhil Singh</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <img src="https://www.excelrs.xyz/images/WhatsApp_Image_2025-07-18_at_20.55.18_0ba984c0.jpg" alt="Nikhil Singh" class="profile-img" />
+    <h2>Electrical Engineering Student</h2>
+    <p><em>"Exploring science & solving problems, one atom at a time."</em></p>
+
+    <div class="section" id="about">
+      <h3>About Me</h3>
+      <p>I'm <strong>Nikhil Singh</strong>, an aspiring Electrical Engineering student currently pursuing B.Tech at <strong>Dumka Engineering College</strong>. I completed my intermediate at <strong>MGM Higher Secondary School, Bokaro</strong>.</p>
+      <p>I’m passionate about space, circuits, AI, and innovation. I regularly read <strong>The Hindu</strong>'s editorial to stay informed. Simplicity, curiosity, and dedication guide my journey.</p>
+    </div>
+
+    <div class="section" id="skills">
+      <h3>Skills & Tools</h3>
+      <p><strong>Languages:</strong> Python, C, C++, HTML, CSS</p>
+      <p><strong>Interests:</strong> Artificial Intelligence, Circuit Design, Scientific Research, Modern Physics</p>
+      <p><strong>Tools:</strong> MATLAB, VS Code, GitHub</p>
+    </div>
+
+    <div class="section" id="contact">
+      <h3>Contact Me</h3>
+      <p>Let's collaborate or connect scientifically!</p>
+      <div class="social-icons">
+        <a href="mailto:nikhil31055@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/nikhil-singh-69b71b324" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/nik046" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 <span>Nikhil Singh</span> | Made with <span>🧪</span> & <span>💡</span> in the lab.
+  </footer>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 90,
+          "density": {
+            "enable": true,
+            "value_area": 700
+          }
+        },
+        "color": { "value": "#00e6e6" },
+        "shape": { "type": "circle" },
+        "opacity": {
+          "value": 0.5,
+          "random": true
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 130,
+          "color": "#00e6e6",
+          "opacity": 0.25,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
